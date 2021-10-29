@@ -20,7 +20,7 @@ public class scene3 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        HStext.text = "BEST : " + PlayerPrefs.GetInt("HighScore");
+        HStext.text = "" + PlayerPrefs.GetInt("HighScore");
         HCtext.text = "" + PlayerPrefs.GetInt("HighCoin");
         SCtext.text = "" + PlayerPrefs.GetInt("Score");
     }

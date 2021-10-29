@@ -188,8 +188,8 @@ public class Ball : MonoBehaviour
 
 	
 
-    private void OnCollisionEnter2D(Collision2D colli)
-    {
+   // private void OnCollisionEnter2D(Collision2D colli)
+    //{
        // if(colli.gameObject.tag =="GameOver")
         //{
 			//Debug.Log("GAMEOVER");
@@ -205,24 +205,24 @@ public class Ball : MonoBehaviour
 	//	}
 
 		//양쪽 벽에 부딛혔을때 핸드폰 진동 울리는 함수
-		if (colli.transform.tag == "wall")
-		{
+		//if (colli.transform.tag == "wall")
+		//{
 			
-			int call = PlayerPrefs.GetInt("vibmuted");
-			if (call == 0)
-			{
-				Debug.Log("vib");
-				vib();
-			}
+		//	int call = PlayerPrefs.GetInt("vibmuted");
+		//	if (call == 0)
+		//	{
+		//		Debug.Log("vib");
+		//		vib();
+		//	}
 
-		}
-	}
+//		}
+//	}
 
-	public void vib()
-	{
-		Handheld.Vibrate();
-		Debug.Log("vibration");
-	}
+	//public void vib()
+	//{
+//		Handheld.Vibrate();
+//		Debug.Log("vibration");
+//	}
 
     //end coin managing-------------------------------
 

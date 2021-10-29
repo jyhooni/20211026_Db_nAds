@@ -25,6 +25,15 @@ public class GameOver : MonoBehaviour
         
     }
 
+
+    
+
+    public void vib()
+    {
+        Handheld.Vibrate();
+        Debug.Log("vibration");
+    }
+
     public void OnTriggerEnter2D(Collider2D collision)
     {
        // Debug.Log("collision");
@@ -39,17 +48,20 @@ public class GameOver : MonoBehaviour
             if (PlayerPrefs.GetInt("Heart", 0) == 1)
             {
                 Debug.Log("heat 1");
+                vib();
                 heart3.SetActive(false);
             }
             if (PlayerPrefs.GetInt("Heart", 0) == 2)
             {
                 Debug.Log("heat 2");
+                vib();
                 heart2.SetActive(false);
             }
 
             if (PlayerPrefs.GetInt("Heart", 0) == 3)
             {
                 Debug.Log("heat 3");
+                vib();
                 heart1.SetActive(false);
 
 

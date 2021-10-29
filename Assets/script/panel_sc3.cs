@@ -21,7 +21,7 @@ public class panel_sc3 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        HStext.text = "BEST:" + PlayerPrefs.GetInt("HighScore");
+        HStext.text = "BEST " + PlayerPrefs.GetInt("HighScore");
         HCtext.text = "$ " + PlayerPrefs.GetInt("HighCoin");
         SCtext.text = "" + PlayerPrefs.GetInt("Score");
     }

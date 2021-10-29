@@ -49,6 +49,8 @@ public class vibtoggle : MonoBehaviour
 
         Save();
         UpdateButtonIcon();
+       // vib();
+
     }
 
 
@@ -90,7 +92,11 @@ public class vibtoggle : MonoBehaviour
     }
 
 
-
+    public void vib()
+    {
+        Handheld.Vibrate();
+        Debug.Log("vibration");
+    }
 
 
 }

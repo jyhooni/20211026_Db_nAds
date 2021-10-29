@@ -250,6 +250,22 @@ public class GameManager : MonoBehaviour
 			//newHoop.transform.Find("hoop1").gameObject.SetActive(true);
 			//newHoop.transform.Find("hoop1_1").gameObject.SetActive(false);
 		}
+		if (GameObject.Find("Ball").GetComponent<Ball>().ScoreCount > 50 && GameObject.Find("Ball").GetComponent<Ball>().ScoreCount < 100)
+		{
+			
+			bg1.SetActive(true);
+			bg2.SetActive(false);
+			bg3.SetActive(false);
+					
+		}
+		if (GameObject.Find("Ball").GetComponent<Ball>().ScoreCount > 100 && GameObject.Find("Ball").GetComponent<Ball>().ScoreCount < 150)
+		{
+
+			bg1.SetActive(true);
+			bg2.SetActive(false);
+			bg3.SetActive(false);
+
+		}
 
 
 	}
