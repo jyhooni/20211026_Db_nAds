@@ -13,16 +13,17 @@ public class panel_sc3 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
 
-    {
-       // PlayerPrefs.SetInt("Score", 0);
-
+    {//initialize point, coin
+       //  PlayerPrefs.SetInt("HighScore", 0);
+        // PlayerPrefs.SetInt("HighCoin", 0);
+         //PlayerPrefs.SetInt("Score", 0);
     }
 
     // Update is called once per frame
     void Update()
     {
         HStext.text = "BEST " + PlayerPrefs.GetInt("HighScore");
-        HCtext.text = "$ " + PlayerPrefs.GetInt("HighCoin");
+        HCtext.text = "" + PlayerPrefs.GetInt("HighCoin");
         SCtext.text = "" + PlayerPrefs.GetInt("Score");
     }
 

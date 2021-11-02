@@ -134,7 +134,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 1.2
+  bundleVersion: 1
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -270,7 +270,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: b97992ac82c81db44a648f90a8d0c9c2, type: 3}
+      m_Icon: {fileID: 2800000, guid: a0360769a582a0644b4335f60440b16a, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
@@ -737,7 +737,7 @@ PlayerSettings:
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
   cloudServicesEnabled:
-    Analytics: 0
+    Analytics: 1
     Build: 0
     Collab: 0
     Game Performance: 0
@@ -757,11 +757,11 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 0
-  cloudProjectId: c5b995a6-e963-4945-a235-ddcfec1d5111
+  cloudProjectId: d85ca88a-aacf-4e37-97ea-2c877a4a1b65
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Dbounce
-  organizationId: jyhooni
+  projectName: "10\uC870 - \uB514\uBC14\uC6B4\uC2A4(\uC815\uC601\uD6C8, \uC7A5\uC131\uC724)"
+  organizationId: unity_e1fd8e9bc42bfe2c490a
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   virtualTexturingSupportEnabled: 0

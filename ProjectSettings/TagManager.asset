@@ -16,6 +16,7 @@ TagManager:
   - topwall
   - block
   - block2
+  - walltop
   layers:
   - Default
   - TransparentFX
@@ -52,4 +53,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: New Layer
+    uniqueID: 423837895
     locked: 0

@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
 	public GameObject block4;
 	public GameObject block5;
 
+	public GameObject[] arrayHoop;
+
 	//audio source
 	//public AudioSource mySfx;
 	//public AudioClip bgm;
@@ -201,7 +203,7 @@ public class GameManager : MonoBehaviour
 
 			
 			newHoop.transform.Find("hoop1").gameObject.SetActive(true);
-			newHoop.transform.Find("hoop1_1").gameObject.SetActive(false);
+			//newHoop.transform.Find("hoop1_1").gameObject.SetActive(false);
 			//GameObject.FindGameObjectWithTag("hoop1").SetActive(true);
 			//GameObject.FindGameObjectWithTag("hoop1_1").SetActive(false);
 			//hoop.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
@@ -233,10 +235,7 @@ public class GameManager : MonoBehaviour
 			bg3.SetActive(false);
 			bg1.SetActive(false);
 
-			//GameObject.Find("hoop").transform.Find("hoop1").gameObject.SetActive(true);
-			//GameObject.Find("hoop").transform.Find("hoop1_1").gameObject.SetActive(false);
-			//newHoop.transform.Find("hoop1").gameObject.SetActive(true);
-			//newHoop.transform.Find("hoop1_1").gameObject.SetActive(false);
+		
 		}
 		if (GameObject.Find("Ball").GetComponent<Ball>().ScoreCount > 50)
 		{
@@ -245,10 +244,7 @@ public class GameManager : MonoBehaviour
 			bg2.SetActive(false);
 			bg1.SetActive(false);
 
-			//GameObject.Find("hoop").transform.Find("hoop1").gameObject.SetActive(false);
-			//GameObject.Find("hoop").transform.Find("hoop1_1").gameObject.SetActive(true);
-			//newHoop.transform.Find("hoop1").gameObject.SetActive(true);
-			//newHoop.transform.Find("hoop1_1").gameObject.SetActive(false);
+			
 		}
 		if (GameObject.Find("Ball").GetComponent<Ball>().ScoreCount > 50 && GameObject.Find("Ball").GetComponent<Ball>().ScoreCount < 100)
 		{
@@ -312,12 +308,12 @@ public class GameManager : MonoBehaviour
 		SceneManager.LoadScene("Game");
 	}
 
-	//BGM
+	public void gameend()
+	{
+		SceneManager.LoadScene("Gameover");
+	}
 
-	//public void Bgm()
-  //  {
-	//	mySfx.PlayOneShot(bgm);
-   // }
+	
 
 
 }

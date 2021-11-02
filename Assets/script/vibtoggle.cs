@@ -11,11 +11,12 @@ public class vibtoggle : MonoBehaviour
     [SerializeField] Image vibonIcon;
     [SerializeField] Image viboffIcon;
 
-    private bool muted = false;
+    private bool muted = true;
     // Start is called before the first frame update
     
     void Start()
     {
+        
         if (!PlayerPrefs.HasKey("vibmuted"))
         {
             PlayerPrefs.SetInt("vibmuted", 0);
@@ -34,17 +35,23 @@ public class vibtoggle : MonoBehaviour
 
     public void OnbuttonPress()
     {
+        
         if (muted == false)
         {
+            //make off vib
             muted = true;
-           // AudioListener.pause = true;
+            PlayerPrefs.GetInt("vibmuted",1);
+            Debug.Log("muted1");
 
 
         }
         else
         {
+            //make on vib
             muted = false;
-           // AudioListener.pause = false;
+            PlayerPrefs.GetInt("vibmuted",0);
+            Debug.Log("vibon0");
+            // AudioListener.pause = false;
         }
 
         Save();
@@ -92,11 +99,6 @@ public class vibtoggle : MonoBehaviour
     }
 
 
-    public void vib()
-    {
-        Handheld.Vibrate();
-        Debug.Log("vibration");
-    }
 
 
 }

@@ -11,22 +11,23 @@ public class onoffbutton : MonoBehaviour
     [SerializeField] Image onIcon;
     [SerializeField] Image offIcon;
 
-    private bool status = false;
+    private bool status = true;
     
     // Start is called before the first frame update
     // status = false --> play, on
 
     void Start()
     {
-        if (!PlayerPrefs.HasKey("vibmuted"))
-        {
-            PlayerPrefs.SetInt("vibmuted", 0);
-            Load();
-        }
-        else
-        {
-            Load();
-        }
+        
+       // if (!PlayerPrefs.HasKey("vibmuted"))
+        //{
+        //   PlayerPrefs.SetInt("vibmuted", 0);
+         //   Load();
+       // }
+       // else
+       // {
+       //     Load();
+       // }
         UpdateButtonIcon();
 
         //GameObject.Find("Ball").GetComponent<Ball>().vib = muted;
@@ -36,6 +37,7 @@ public class onoffbutton : MonoBehaviour
 
     public void OnbuttonPress()
     {
+        Debug.Log("pause pressed");
         if (status == false)
         {
             status = true;

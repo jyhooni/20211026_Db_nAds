@@ -28,7 +28,7 @@ public class hoop : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {//새로운 위치 = 현재위치 + 방향 * 속도 
+    {//새로운 위치 = 현재위치 + 방향 * 속도* 숫자f 하면 속도 증가.  
         transform.position = transform.position + new Vector3(0, 1, 0) * Time.deltaTime;
         
         

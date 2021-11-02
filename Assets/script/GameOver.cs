@@ -11,41 +11,64 @@ public class GameOver : MonoBehaviour
     public GameObject heart1;
     public GameObject heart2;
     public GameObject heart3;
+    public GameObject Ads;
+    public GameObject End;
+    public GameObject onemore;
+    public GameObject cleaner;
 
+    public GameObject Vibmanager;
+
+    
+
+    public int vibb;
     // Start is called before the first frame update
     void Start()
     {
-        heartcount = 0;
-       // Advertisement.Initialize(4402129, true);
+        vibb = PlayerPrefs.GetInt("vibmuted");
+
+        heartcount = 4;
+        // Advertisement.Initialize(4402129, true);
+       
+
+
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
 
 
-    
-
     public void vib()
     {
-        Handheld.Vibrate();
-        Debug.Log("vibration");
+
+        if (vibb == 1)
+        {
+            
+        }
+        else
+        {
+            Handheld.Vibrate();
+            Debug.Log("vibration");
+        }
+        
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-       // Debug.Log("collision");
-
+        // Debug.Log("collision");
+       
         if (collision.transform.tag == "hoop")
         {
 
             Debug.Log(heartcount);
-            heartcount += 1;
+            heartcount = heartcount - 1;
             Debug.Log(heartcount);
             PlayerPrefs.SetInt("Heart", heartcount);
-            if (PlayerPrefs.GetInt("Heart", 0) == 1)
+            if (PlayerPrefs.GetInt("Heart", 0) == 3)
             {
                 Debug.Log("heat 1");
                 vib();
@@ -58,18 +81,59 @@ public class GameOver : MonoBehaviour
                 heart2.SetActive(false);
             }
 
-            if (PlayerPrefs.GetInt("Heart", 0) == 3)
+            if (PlayerPrefs.GetInt("Heart", 0) == 1)
             {
                 Debug.Log("heat 3");
                 vib();
                 heart1.SetActive(false);
+               
+                Time.timeScale = 0;
+                Ads.SetActive(true);
+                End.SetActive(true);
+                //onemore.SetActive(true);
 
 
 
-                SceneManager.LoadScene("Gameover");
+                Debug.Log("game over!!!");
             }
 
         }
 
+        
+
     }
+
+   public void reGame()
+    {
+        Debug.Log("regame");
+  
+        heartcount = 4;
+        Ads.SetActive(false);
+        End.SetActive(false);
+        heart1.SetActive(true);
+        heart2.SetActive(true);
+        heart3.SetActive(true);
+
+        del();
+        
+        Time.timeScale = 1;
+
+        
+
+        
+    }
+
+    public void del()
+    {
+        cleaner.SetActive(true);
+
+
+        Invoke("onclean", 0.1f);
+
+    }
+    public void onclean()
+    {
+        cleaner.SetActive(false);
+    }
+
 }
