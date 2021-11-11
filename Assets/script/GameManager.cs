@@ -228,7 +228,7 @@ public class GameManager : MonoBehaviour
 			//.getchild(0).setactive(true);
 
 		}
-		if (GameObject.Find("Ball").GetComponent<Ball>().ScoreCount > 20 && GameObject.Find("Ball").GetComponent<Ball>().ScoreCount < 50)
+		if (GameObject.Find("Ball").GetComponent<Ball>().ScoreCount >= 20 && GameObject.Find("Ball").GetComponent<Ball>().ScoreCount < 60)
 		{
 			//Debug.Log("2");
 			bg2.SetActive(true);
@@ -237,24 +237,16 @@ public class GameManager : MonoBehaviour
 
 		
 		}
-		if (GameObject.Find("Ball").GetComponent<Ball>().ScoreCount > 50)
+		
+		if (GameObject.Find("Ball").GetComponent<Ball>().ScoreCount >= 60 && GameObject.Find("Ball").GetComponent<Ball>().ScoreCount < 100)
 		{
-			//Debug.Log("3");
+			
 			bg3.SetActive(true);
 			bg2.SetActive(false);
 			bg1.SetActive(false);
-
-			
-		}
-		if (GameObject.Find("Ball").GetComponent<Ball>().ScoreCount > 50 && GameObject.Find("Ball").GetComponent<Ball>().ScoreCount < 100)
-		{
-			
-			bg1.SetActive(true);
-			bg2.SetActive(false);
-			bg3.SetActive(false);
 					
 		}
-		if (GameObject.Find("Ball").GetComponent<Ball>().ScoreCount > 100 && GameObject.Find("Ball").GetComponent<Ball>().ScoreCount < 150)
+		if (GameObject.Find("Ball").GetComponent<Ball>().ScoreCount >= 100 && GameObject.Find("Ball").GetComponent<Ball>().ScoreCount < 150)
 		{
 
 			bg1.SetActive(true);

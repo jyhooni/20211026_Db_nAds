@@ -62,9 +62,9 @@ public class Ball : MonoBehaviour
     {
 
 		// coin, score initialize
-		//PlayerPrefs.SetInt("Score", 0);
-		//PlayerPrefs.SetInt("HighScore", 0);
-		//PlayerPrefs.SetInt("HighCoin", 0);
+		PlayerPrefs.SetInt("Score", 0);
+		PlayerPrefs.SetInt("HighScore", 0);
+		PlayerPrefs.SetInt("HighCoin", 0);
 
 
 

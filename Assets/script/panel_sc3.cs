@@ -16,7 +16,7 @@ public class panel_sc3 : MonoBehaviour
     {//initialize point, coin
        //  PlayerPrefs.SetInt("HighScore", 0);
         // PlayerPrefs.SetInt("HighCoin", 0);
-         //PlayerPrefs.SetInt("Score", 0);
+        // PlayerPrefs.SetInt("Score", 0);
     }
 
     // Update is called once per frame
